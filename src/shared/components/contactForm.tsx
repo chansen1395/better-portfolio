@@ -34,14 +34,20 @@ const ContactUs: React.FC = () => {
 	return (
 		<form ref={form} onSubmit={sendEmail}>
 			<label>Name</label>
+			<br></br>
 			<Input type="text" name="user_name" />
+			<br></br>
 			<label>Email</label>
+			<br></br>
 			<Input type="email" name="user_email" />
+			<br></br>
 			<label>Message</label>
+			<br></br>
 			<TextArea
 				name="message"
 				placeholder="Your color palette is bad blah blah blah..."
 			/>
+			<br></br>
 			<CardButton type="submit" value="Send">
 				Send
 			</CardButton>

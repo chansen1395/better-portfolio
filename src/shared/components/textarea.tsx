@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 
 export const TextArea = styled.textarea`
+	width: 80%;
 	background-color: rgb(238 245 255);
 	color: black;
 	border: 1px solid rgb(217, 233, 255);
