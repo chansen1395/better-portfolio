@@ -1,6 +1,6 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./App.css";
-import AppHeader from "./shared/components/appHeader";
+// import AppHeader from "./shared/components/appHeader";
 import styled from "@emotion/styled";
 import Card from "./shared/components/card";
 import ContactUs from "./shared/components/contactForm";
@@ -10,11 +10,11 @@ import ContactUs from "./shared/components/contactForm";
 // import { Button } from "../src/shared/components/button";
 
 function App() {
-	const [count, setCount] = useState(0);
+	// const [count, setCount] = useState(0);
 
 	return (
 		<AppContainer>
-			<AppHeader></AppHeader>
+			{/* <AppHeader></AppHeader> */}
 			<PageOverview>
 				<NameHeader>Connor M. Hansen</NameHeader>
 				<EducationHeader>B.A. Economics</EducationHeader>
@@ -294,9 +294,9 @@ const EducationHeader = styled.div`
 	font-size: 24pt;
 	color: gray;
 `;
-const SubHeader = styled.h3`
-	font-size: 18pt;
-`;
+// const SubHeader = styled.h3`
+// 	font-size: 18pt;
+// `;
 const OrgName = styled.div`
 	align-items: right;
 	font-size: 14pt;
