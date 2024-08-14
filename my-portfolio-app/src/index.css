@@ -23,12 +23,17 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+	background: rgb(189, 185, 250);
+  background: linear-gradient(25deg, rgb(115 113 142) 0%, rgb(255 254 202) 45%, rgb(217 233 255) 88%);
 }
+
+/* background: linear-gradient(
+  45deg,
+  rgba(189, 185, 250, 1) 0%,
+  rgba(202, 202, 237, 1) 35%,
+  rgba(210, 234, 241, 1) 56%
+); */
+/* linear-gradient(71deg, rgb(115 113 142) 0%, rgb(194 194 245) 35%, rgb(229 236 238) 56%) */
 
 h1 {
   font-size: 3.2em;

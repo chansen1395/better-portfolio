@@ -12,9 +12,9 @@ const AppHeader = () => {
 	return (
 		<Header>
 			{/* <Logo>CH</Logo> */}
-			Header<About>About Connor - WIP</About>
+			{/* Header<About>About Connor - WIP</About>
 			<Contact>Contact Connor - WIP</Contact>
-			<SillyMode onClick={toggleSillyMode}>Silly Mode! - WIP</SillyMode>
+			<SillyMode onClick={toggleSillyMode}>Silly Mode! - WIP</SillyMode> */}
 		</Header>
 	);
 };
