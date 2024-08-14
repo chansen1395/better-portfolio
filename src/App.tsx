@@ -310,9 +310,9 @@ const Description = styled.div`
 `;
 
 const HorizontalLine = styled.hr`
-	border-color: #bdb9fa;
-	border-block-end-color: #cacaed;
-	border-block-start-color: #d2eaf1;
+	border-color: rgb(115 113 142);
+	border-block-end-color: rgb(217 233 255);
+	border-block-start-color: rgb(255 254 202);
 	border-width: medium;
 	opacity: 33%;
 `;
