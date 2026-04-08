@@ -3,15 +3,46 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Connor Hansen</title>
-  <script type="module" crossorigin src="/assets/index-CY1RKHSm.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-feg0_LKA.css">
+  <meta name="description"
+    content="Connor Hansen - Software engineer at Pacific Northwest National Laboratory focused on React, TypeScript, and production web applications." />
+  <title>Connor Hansen - Software Engineer</title>
+
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const redirectedPath = params.get("p");
+
+      if (!redirectedPath) {
+        return;
+      }
+
+      const segments = window.location.pathname.split("/").filter(Boolean);
+      const basePath = segments.length > 0 ? `/${segments[0]}` : "";
+      const normalizedPath = redirectedPath.startsWith("/")
+        ? redirectedPath
+        : `/${redirectedPath}`;
+
+      window.history.replaceState(
+        null,
+        "",
+        `${basePath}${normalizedPath}${window.location.hash}`,
+      );
+    })();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <script type="module" crossorigin src="/better-portfolio/assets/index-CR0DK35U.js"></script>
+  <link rel="stylesheet" crossorigin href="/better-portfolio/assets/index-ZKJq3GNc.css">
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root"></div>
 </body>
 
 </html>
