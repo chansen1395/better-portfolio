@@ -80,7 +80,7 @@ export const projects: Project[] = [
     approach:
       "Led a phased refactoring effort -- cleaned up state management, improved the UI, and set up reliable CI/CD and deployment pipelines. Worked directly with stakeholders on feature priorities, wrote statements of work, and delivered monthly usage reports.",
     outcomes: [
-      "207 logins and 45 new registrations in 8 months (Jan-Aug 2025)",
+      // "207 logins and 45 new registrations in 8 months (Jan-Aug 2025)",
       "Modernized UI with improved data visualizations",
       "Reduced legacy technical debt accumulated over 5+ years",
       "Regular stakeholder reporting with usage analytics",
@@ -164,7 +164,7 @@ export const education: Education[] = [
     period: "2013 - 2017",
     details: [
       "Minors in Finance and Information Systems",
-      "Authored an economic impact study for the university under faculty direction",
+      "One of 13 student co-authors on a university economic impact study led by Dr. Nathanael Peach",
     ],
   },
 ];
@@ -200,7 +200,7 @@ export const about = {
   journey:
     "I came to software through an economics degree and a couple of operations roles where I kept finding things to automate. That habit eventually pointed me toward development full-time, so I went through Epicodus and landed at PNNL.",
   personal:
-    "Outside of work I make pottery, plan backpacking trips, restore ancient coins, and run a Dungeons & Dragons campaign.",
+    "Outside of work I make pottery, rockhound, plan backpacking trips, pursue numismatics, restore ancient coins, and DM Dungeons & Dragons.",
 };
 
 // --- Contact / Social ----------------------------------------
