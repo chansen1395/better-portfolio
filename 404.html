@@ -1,18 +1,24 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Moved to connorhansen.com</title>
-<meta name="robots" content="noindex">
-<link rel="canonical" href="https://connorhansen.com/">
-<meta http-equiv="refresh" content="0; url=https://connorhansen.com/">
-<script>
-  // Keep the path: /better-portfolio/resume -> https://connorhansen.com/resume
-  var path = location.pathname.replace(/^\/better-portfolio/, '') || '/';
-  location.replace('https://connorhansen.com' + path + location.search + location.hash);
-</script>
-</head>
-<body>
-<p>This site moved to <a href="https://connorhansen.com/">connorhansen.com</a>.</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting...</title>
+    <script>
+      (function () {
+        const segments = window.location.pathname.split("/").filter(Boolean);
+        const baseSegment = segments.shift() || "";
+        const basePath = baseSegment ? `/${baseSegment}/` : "/";
+        const routePath = segments.length ? `/${segments.join("/")}` : "/";
+        const target = `${basePath}?p=${encodeURIComponent(
+          routePath + window.location.search,
+        )}${window.location.hash}`;
+
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
 </html>

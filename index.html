@@ -1,18 +1,48 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>Moved to connorhansen.com</title>
-<meta name="robots" content="noindex">
-<link rel="canonical" href="https://connorhansen.com/">
-<meta http-equiv="refresh" content="0; url=https://connorhansen.com/">
-<script>
-  // Keep the path: /better-portfolio/resume -> https://connorhansen.com/resume
-  var path = location.pathname.replace(/^\/better-portfolio/, '') || '/';
-  location.replace('https://connorhansen.com' + path + location.search + location.hash);
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Connor Hansen - Software engineer at Pacific Northwest National Laboratory focused on React, TypeScript, and production web applications." />
+  <title>Connor Hansen - Software Engineer</title>
+
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const redirectedPath = params.get("p");
+
+      if (!redirectedPath) {
+        return;
+      }
+
+      const segments = window.location.pathname.split("/").filter(Boolean);
+      const basePath = segments.length > 0 ? `/${segments[0]}` : "";
+      const normalizedPath = redirectedPath.startsWith("/")
+        ? redirectedPath
+        : `/${redirectedPath}`;
+
+      window.history.replaceState(
+        null,
+        "",
+        `${basePath}${normalizedPath}${window.location.hash}`,
+      );
+    })();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <script type="module" crossorigin src="/better-portfolio/assets/index-Cm4n9wyw.js"></script>
+  <link rel="stylesheet" crossorigin href="/better-portfolio/assets/index-ZKJq3GNc.css">
 </head>
+
 <body>
-<p>This site moved to <a href="https://connorhansen.com/">connorhansen.com</a>.</p>
+  <div id="root"></div>
 </body>
+
 </html>
