@@ -1,0 +1,20 @@
+// Cloudflare Workers config for https://connorhansen.com.
+// Deploy: `npm run deploy` (needs CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID in the environment).
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "connorhansen-portfolio",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "html_handling": "none", // serve /labs/*.html as-is instead of 307-ing to extensionless URLs
+    "not_found_handling": "single-page-application",
+    "run_worker_first": true
+  },
+  "routes": [
+    { "pattern": "connorhansen.com", "custom_domain": true },
+    { "pattern": "www.connorhansen.com", "custom_domain": true }
+  ],
+  "observability": { "enabled": true }
+}

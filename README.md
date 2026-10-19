@@ -27,15 +27,15 @@ The dev server starts at `http://localhost:5173/`.
 
 ## Deployment
 
-The site is configured for GitHub Pages deployment from the `gh-pages` branch.
+The site is served at [connorhansen.com](https://connorhansen.com) by a Cloudflare Worker with static assets (`wrangler.jsonc`, `worker/index.js`). The Worker redirects `www` to the apex, adds security headers and a CSP, and falls back to `index.html` for client-side routes.
 
 ```bash
-npm run deploy
+CLOUDFLARE_API_TOKEN=... CLOUDFLARE_ACCOUNT_ID=... npm run deploy
 ```
 
-That script builds the site and publishes the `dist/` directory to GitHub Pages.
+That script builds the site and runs `wrangler deploy`, which uploads `dist/` and attaches both custom domains. The account ID and token come from the environment and are never committed.
 
-If the repository name changes, update the GitHub Pages base path in `vite.config.ts` before deploying.
+The old GitHub Pages URL (`chansen1395.github.io/better-portfolio`) redirects to connorhansen.com.
 
 To verify the production build locally:
 

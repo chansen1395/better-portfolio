@@ -195,7 +195,7 @@ const HeroBg = styled.div`
 const HeroContent = styled.div`
 	position: relative;
 	z-index: 1;
-	padding: var(--space-12) 0;
+	padding-block: var(--space-12); /* keep .container's side gutter */
 `;
 
 const HeroLabel = styled.div`

@@ -151,7 +151,7 @@ export function WorkIndex() {
 // --- Styled Components --------------------------------------
 
 const NotFound = styled.div`
-	padding: var(--space-24) 0;
+	padding-block: var(--space-24); /* keep .container's side gutter */
 	text-align: center;
 
 	h1 {

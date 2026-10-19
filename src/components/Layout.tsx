@@ -1,7 +1,21 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import styled from "@emotion/styled";
-import { social } from "../data/content";
+import { projects, social } from "../data/content";
+
+const SITE = "Connor Hansen";
+const PAGE_TITLES: Record<string, string> = {
+	"/resume": "Resume",
+	"/projects": "Projects",
+	"/side-projects": "Side Projects",
+	"/contact": "Contact",
+};
+
+function titleFor(pathname: string) {
+	const slug = pathname.match(/^\/(?:projects|work)\/([^/]+)/)?.[1];
+	const page = slug ? projects.find((p) => p.slug === slug)?.title : PAGE_TITLES[pathname];
+	return page ? `${page} · ${SITE}` : `${SITE} · Software Engineer`;
+}
 
 // -- Nav -----------------------------------------------------
 const navLinks = [
@@ -112,15 +126,21 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
 	const location = useLocation();
 
-	// Scroll to top on route change
+	// Scroll to top and set the tab title on route change
 	useEffect(() => {
 		window.scrollTo(0, 0);
+		document.title = titleFor(location.pathname);
 	}, [location.pathname]);
 
 	return (
 		<>
+			<a className="skip-link" href="#main">
+				Skip to content
+			</a>
 			<Nav />
-			<Main>{children}</Main>
+			<Main id="main" tabIndex={-1}>
+				{children}
+			</Main>
 			<Footer />
 		</>
 	);

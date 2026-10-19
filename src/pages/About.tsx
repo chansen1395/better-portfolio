@@ -12,13 +12,16 @@ export default function ResumePage() {
 						<PageLabel>Resume</PageLabel>
 						<PageTitle>Experience and background</PageTitle>
 						<PageIntro>{about.intro}</PageIntro>
-						<HeaderActions>
+						<HeaderActions className="no-print">
 							<PrimaryAction to="/projects">
 								View projects
 							</PrimaryAction>
 							<SecondaryAction href={`mailto:${social.email}`}>
 								Email me
 							</SecondaryAction>
+							<PrintAction type="button" onClick={() => window.print()}>
+								Save as PDF
+							</PrintAction>
 						</HeaderActions>
 					</ScrollReveal>
 				</div>
@@ -220,6 +223,20 @@ const SecondaryAction = styled.a`
 	background: transparent;
 	color: var(--color-text-secondary);
 	border: 1px solid var(--color-border-hover);
+
+	&:hover {
+		border-color: var(--color-accent);
+		color: var(--color-text);
+	}
+`;
+
+const PrintAction = styled.button`
+	${actionStyles}
+	background: transparent;
+	color: var(--color-text-secondary);
+	border: 1px solid var(--color-border-hover);
+	cursor: pointer;
+	font-family: inherit;
 
 	&:hover {
 		border-color: var(--color-accent);

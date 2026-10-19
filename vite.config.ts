@@ -1,9 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-const githubPagesBase = "/better-portfolio/";
-
-export default defineConfig(({ command }) => ({
+// Served from the root of https://connorhansen.com (Cloudflare Workers static assets).
+export default defineConfig({
   plugins: [react()],
-  base: command === "build" ? githubPagesBase : "/",
-}));
+  base: "/",
+});
