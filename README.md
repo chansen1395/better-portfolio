@@ -27,15 +27,15 @@ The dev server starts at `http://localhost:5173/`.
 
 ## Deployment
 
-The site is served at [connorhansen.com](https://connorhansen.com) by a Cloudflare Worker with static assets (`wrangler.jsonc`, `worker/index.js`). The Worker redirects `www` to the apex, adds security headers and a CSP, and falls back to `index.html` for client-side routes.
+This branch is set up to deploy to connorhansen.com as a Cloudflare Worker with static assets (`wrangler.jsonc`, `worker/index.js`). It is not published there yet. The Worker redirects `www` to the apex, adds security headers and a CSP, and falls back to `index.html` for client-side routes.
 
 ```bash
 CLOUDFLARE_API_TOKEN=... CLOUDFLARE_ACCOUNT_ID=... npm run deploy
 ```
 
-That script builds the site and runs `wrangler deploy`, which uploads `dist/` and attaches both custom domains. The account ID and token come from the environment and are never committed.
+That script builds the site and runs `wrangler deploy`, which uploads `dist/` and attaches both custom domains, replacing whatever is on them. The account ID and token come from the environment and are never committed.
 
-The old GitHub Pages URL (`chansen1395.github.io/better-portfolio`) redirects to connorhansen.com.
+The version currently live at `chansen1395.github.io/better-portfolio` is the earlier build on the `gh-pages` branch.
 
 To verify the production build locally:
 
